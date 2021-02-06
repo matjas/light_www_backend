@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <link rel="icon" href="/admin/img/favicon.png">
+    <link rel="stylesheet" href="/admin/css/styles.css">
+</head>
+<body>
+<div class="centered-form">
+    <div class="centered-form__box">
+        <h1>Login</h1>
+        <p class="login_message">Incorrect name or password</p>
+        <form id="login-form" action="">
+            <label for="username-input">Name</label>
+            <input id="username-input" type="text" name="username" placeholder="Name" required minlength="3">
+            <label for="password-input">Password</label>
+            <input id="password-input" type="password" name="password" placeholder="Password" required minlength="7">
+            <button>Login</button>
+        </form>
+    </div>
+</div>
+<script type="module" src="/admin/js/login.js"></script>
+</body>
+</html>

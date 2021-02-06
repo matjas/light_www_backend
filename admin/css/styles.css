@@ -1,0 +1,185 @@
+/* General Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+input {
+    font-size: 14px;
+}
+
+body {
+    line-height: 1.4;
+    color: #333333;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #777;
+}
+
+input {
+    border: 1px solid #eeeeee;
+    padding: 12px;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+    padding: 12px;
+    background: #7c5cbf;
+    border: none;
+    color: white;
+    font-size: 16px;
+    transition: background .3s ease;
+}
+
+button:hover {
+    background: #6b47b8;
+}
+
+button:disabled {
+    cursor: default;
+    background: #7c5cbf94;
+}
+
+/* Login page */
+.centered-form {
+    background: #333744;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered-form__box {
+    box-shadow: 0 0 17px 1px #1D1F26;
+    background: #F7F7FA;
+    padding: 24px;
+    width: 250px;
+}
+
+.centered-form button {
+    width: 100%;
+}
+
+.centered-form input {
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.login_message {
+    color: red;
+    visibility: hidden;
+    margin-bottom: 10px;
+}
+
+/*Dashboard*/
+.dash {
+    display: flex;
+}
+
+.dash__sidebar {
+    height: 100vh;
+    color: white;
+    background: #333744;
+    width: 225px;
+    overflow-y: scroll;
+    padding: 2em 0;
+}
+
+.dash__main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+}
+
+.dash__sidebar li{
+    width: 100%;
+    text-align: center;
+}
+.dash__sidebar a{
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    padding: 1em;
+    display: block;
+    background-color: #6b47b8;
+    border-bottom:1px solid #333744;
+}
+
+.dash__sidebar a:hover {
+    background-color: #8d63e5;
+}
+
+.dash__sidebar a.active {
+    background-color: #6a2be9;
+}
+
+.dash__sidebar .header{
+    margin-bottom:4em
+}
+
+.dash__sidebar p, .dash__sidebar p {
+    text-align: center;
+    line-height: 2em;
+}
+
+.compose {
+    margin-top: 16px;
+    padding: 24px;
+}
+
+table {
+    border: 1px solid #999;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead{
+    background-color: #ccc;
+}
+
+th {
+    border: 1px solid black;
+}
+
+td{
+    padding: 5px;
+    border: 1px solid black;
+}
+td:last-of-type{
+    width:120px;
+}
+
+.btnSm {
+    border:1px solid #999;
+    background-color: #ccc;
+    padding: 1px 2px;
+    margin: 0 2px;
+    display: inline-block;
+    color:black;
+}
+
+.btnSm:hover {
+    color:white;
+}
+
+td input {
+    width: 100%
+}

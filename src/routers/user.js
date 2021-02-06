@@ -22,9 +22,10 @@ router.post('/users/login', async (req, res) => {
         const user = await User.findByCredentials(req.body.name, req.body.password)
         const token = await user.generateAuthToken()
 
+        res.setHeader('Set-Cookie', `token=${token}; HttpOnly; max-age=3600; Path=/`);
         res.send({user, token})
     } catch (e) {
-        res.status(400).send()
+        res.status(400).send({})
     }
 })
 

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dashboard</title>
+    <link rel="icon" href="/admin/img/favicon.png">
+    <link rel="stylesheet" href="/admin/css/styles.css">
+</head>
+
+<body>
+<div class="dash">
+    <section id="sidebar" class="dash__sidebar">
+        <ul id="main_menu">
+            <li><a href="/admin/dashboard.html#profile">Profile</a></li>
+            <li><a href="/admin/dashboard.html#pages">Pages</a></li>
+            <li><a href="/admin/dashboard.html#articles">Articles</a></li>
+            <li><a href="/admin/dashboard.html#logout">Logout</a></li>
+        </ul>
+
+    </section>
+    <div class="dash__main">
+
+        <div class="compose" id="main_section">
+
+        </div>
+    </div>
+
+
+</div>
+<script id="profile-template" type="text/html">
+    <h1>Profile</h1>
+    <p>Name: {{name}}</p>
+</script>
+<script id="pages-template" type="text/html">
+    <h1>Pages</h1>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Code</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#pages}}
+                <tr>
+                    <td>
+                        <input class="inp-name" type="text" name="name" placeholder="Name" required minlength="3" value="{{name}}">
+                    </td>
+                    <td>
+                        <input class="inp-code" type="text" name="code" placeholder="Code" required minlength="3" value="{{code}}">
+                    </td>
+                    <td>
+                        <input class="inp-desc" type="text" name="description" placeholder="Description" minlength="3" value="{{description}}">
+                    </td>
+                    <td><button data-id="{{_id}}" data-type="save" class="btnSm save">Save</button><button data-id="{{_id}}" data-type="delete" class="btnSm delete">Delete</button></td>
+                </tr>
+                {{/pages}}
+                <tr class="editForm">
+                    <td><input class="inp-name" type="text" name="name" placeholder="Name" required minlength="3"></td>
+                    <td><input class="inp-code" type="text" name="code" placeholder="Code" required minlength="3"></td>
+                    <td><input class="inp-desc" type="text" name="description" placeholder="Description" minlength="3"></td>
+                    <td><button class="btnSm add" data-type="add">Add</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</script>
+
+<script id="articles-template" type="text/html">
+    <h1>Articles</h1>
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Code</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#articles}}
+            <tr>
+                <td>
+                    <input class="inp-name" type="text" name="name" placeholder="Name" required minlength="3" value="{{name}}">
+                </td>
+                <td>
+                    <input class="inp-code" type="text" name="code" placeholder="Code" required minlength="3" value="{{code}}">
+                </td>
+                <td>
+                    <input class="inp-title" type="text" name="title" placeholder="Title" required minlength="3" value="{{title}}">
+                </td>
+                <td>
+                    <input class="inp-desc" type="text" name="description" placeholder="Description" minlength="3" value="{{description}}">
+                </td>
+                <td><button data-id="{{_id}}" data-type="save" class="btnSm save">Save</button><button data-id="{{_id}}" data-type="delete" class="btnSm delete">Delete</button></td>
+            </tr>
+            {{/articles}}
+            <tr class="editForm">
+                <td><input class="inp-name" type="text" name="name" placeholder="Name" required minlength="3"></td>
+                <td><input class="inp-code" type="text" name="code" placeholder="Code" required minlength="3"></td>
+                <td><input class="inp-title" type="text" name="type" placeholder="Title" required minlength="3"></td>
+                <td><input class="inp-desc" type="text" name="description" placeholder="Description" minlength="3"></td>
+                <td><button class="btnSm add" data-type="add">Add</button></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+<script type="module" src="/admin/js/dashboard.js"></script>
+</body>
+
+</html>
